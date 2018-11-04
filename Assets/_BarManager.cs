@@ -13,18 +13,32 @@ public class _BarManager : MonoBehaviour
 
     }
 
-    public void updateBar ()
+    public void updateBar (int lostA, int lostB, int gotA, int gotB)
     {
-        /*volumeA += collector.lostItA;
-            volumeB += collector.lostItB;
+        int tempA = volumeA;
+        int tempB = volumeB;
 
-        if (isA)
+        volumeA += lostA;
+        volumeA += gotA;
+
+        volumeB += lostB;
+        volumeB += gotB;
+
+        if (volumeA > tempA) // barra encheu
         {
-            // TODO: Update Visual in bar A
+            Bar_A.transform.position = new Vector3 (Bar_A.transform.position.x, Bar_A.transform.position.y - 10f, Bar_A.transform.position.z);
         }
-        else
+        else if (volumeA < tempA)
         {
-            // TODO: Update Visual in bar B
-        }*/
+            Bar_A.transform.position = new Vector3 (Bar_A.transform.position.x, Bar_A.transform.position.y + 10f, Bar_A.transform.position.z);
+        }
+        else if (volumeB > tempB)
+        {
+            Bar_B.transform.position = new Vector3 (Bar_B.transform.position.x, Bar_B.transform.position.y - 10f, Bar_B.transform.position.z);
+        }
+        else if (volumeB < tempB)
+        {
+            Bar_B.transform.position = new Vector3 (Bar_B.transform.position.x, Bar_B.transform.position.y + 10f, Bar_B.transform.position.z);
+        }
     }
 }

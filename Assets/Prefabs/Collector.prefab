@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841b002d13677e749978c7de156ff665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bar: {fileID: 114373442370693128, guid: f134e1b19df6f904485b9d9704dbf6e7, type: 2}
+  barManager: {fileID: 0}
   lostItA: 0
   lostItB: 0
 --- !u!222 &222275640716550234

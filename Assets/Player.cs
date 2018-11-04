@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     //public GameManager gameManager;
     public float xPos, speed;
+    public int gotItA, gotItB;
+    public _BarManager barManager;
 
     void Awake ()
     {
@@ -51,4 +53,18 @@ public class Player : MonoBehaviour
             return;
         }
     }
+
+    void OnTriggerEnter2D (Collider2D col)
+    {
+        gotItA = col.GetComponent<Collectable> ().lostItA;
+        gotItB = col.GetComponent<Collectable> ().lostItB;
+
+        barManager.updateBar (0, 0, gotItA, gotItB);
+
+        AudioSource audio = GetComponent<AudioSource> ();
+        audio.Play ();
+
+        Destroy (col.gameObject);
+    }
+
 }

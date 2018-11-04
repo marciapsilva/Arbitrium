@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
-    public List<Item> itemsToSpawn;
     public GameObject collectable;
 
     public bool timeHasEnded = false; // TODO: Get countdown working
@@ -32,10 +32,15 @@ public class Spawner : MonoBehaviour
         {
             for (int i = 0; i < 30; i++) // TODO: Revisar esse número
             {
+                if (i >= 30) // Countdown?
+                {
+                    SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+                    yield return new WaitForSecondsRealtime (2);
+                }
+
                 SpawnItems ();
                 yield return new WaitForSecondsRealtime (2);
             }
-            yield return new WaitForSecondsRealtime (2);
         }
     }
 

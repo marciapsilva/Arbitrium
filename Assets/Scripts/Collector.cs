@@ -6,7 +6,7 @@ public class Collector : MonoBehaviour
 {
     private Collectable lostItem;
     
-    public BarManager barManager;
+    public _BarManager barManager;
 
     public int lostItA, lostItB;
 
@@ -20,7 +20,10 @@ public class Collector : MonoBehaviour
         lostItA = col.GetComponent<Collectable> ().lostItA;
         lostItB = col.GetComponent<Collectable> ().lostItB;
 
-        bar.updateBar ();
+        barManager.updateBar (lostItA, lostItB, 0, 0);
+
+        AudioSource audio = GetComponent<AudioSource> ();
+        audio.Play ();
 
         Destroy (col.gameObject);
     }

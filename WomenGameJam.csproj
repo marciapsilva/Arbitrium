@@ -304,7 +304,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_BarManager.cs" />
-    <Compile Include="Assets\BarManager.cs" />
+    <Compile Include="Assets\BackgroundMusic.cs" />
     <Compile Include="Assets\Debugger.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
