@@ -305,6 +305,7 @@
   <ItemGroup>
     <Compile Include="Assets\_BarManager.cs" />
     <Compile Include="Assets\BackgroundMusic.cs" />
+    <Compile Include="Assets\Credits.cs" />
     <Compile Include="Assets\Debugger.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
@@ -314,6 +315,7 @@
     <Compile Include="Assets\Scripts\PlayButton.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\TimeBar.cs" />
+    <Compile Include="Assets\WGJ.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cameras\leftShader.shader" />

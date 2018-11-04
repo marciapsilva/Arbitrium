@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
+    public Animator chooseChar;
     public bool isFemale;
 
     void Awake ()
@@ -20,7 +21,31 @@ public class GameManager : MonoBehaviour {
         }
 
         DontDestroyOnLoad (gameObject);
+    }
+
+    void Start ()
+    {
+        chooseChar.SetBool ("rightPress", false);
+        isFemale = true;
     } 
+
+    void Update ()
+    {
+        if (Input.GetKeyDown (KeyCode.RightArrow))
+        {
+            chooseChar.SetBool ("rightPress", true);
+            isFemale = false;
+        }
+        else if (Input.GetKeyDown (KeyCode.LeftArrow))
+        {
+            chooseChar.SetBool ("rightPress", false);
+            isFemale = true;
+        }
+        else if (Input.GetKeyDown (KeyCode.Return))
+        {
+            LoadNextScene ();
+        }
+    }
 
     public void LoadNextScene ()
     {

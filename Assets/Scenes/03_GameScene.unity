@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: -1200242548, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 1
+  m_ShowMaskGraphic: 0
 --- !u!114 &2796849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,7 +684,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b1936b52c0b909343a71491cc6a22a31, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -704,11 +704,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710e2c339521b1043bc7381c10562903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   xPos: 0
-  speed: 6
+  speed: 50
   gotItA: 0
   gotItB: 0
   barManager: {fileID: 875749969}
+  boy: {fileID: 21300000, guid: a688a05eb41b3be4da85194390376430, type: 3}
+  girl: {fileID: 21300000, guid: c5bd0595c9eecae44b0ebc573130c88d, type: 3}
 --- !u!222 &904422927
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1177,8 +1180,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b1936b52c0b909343a71491cc6a22a31,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 114299939604621434, guid: b309bae5c06739f43abcc36d57831d13,
         type: 2}
       propertyPath: m_Type
@@ -1198,6 +1200,23 @@ Prefab:
         type: 2}
       propertyPath: m_LocalScale.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114266717858562632, guid: b309bae5c06739f43abcc36d57831d13,
+        type: 2}
+      propertyPath: boy
+      value: 
+      objectReference: {fileID: 21300000, guid: a688a05eb41b3be4da85194390376430,
+        type: 3}
+    - target: {fileID: 114266717858562632, guid: b309bae5c06739f43abcc36d57831d13,
+        type: 2}
+      propertyPath: girl
+      value: 
+      objectReference: {fileID: 21300000, guid: c5bd0595c9eecae44b0ebc573130c88d,
+        type: 3}
+    - target: {fileID: 114266717858562632, guid: b309bae5c06739f43abcc36d57831d13,
+        type: 2}
+      propertyPath: speed
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b309bae5c06739f43abcc36d57831d13, type: 2}

@@ -1,21 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    //public GameManager gameManager;
+    public GameManager gameManager;
     public float xPos, speed;
     public int gotItA, gotItB;
     public _BarManager barManager;
+    public Sprite boy, girl;
 
     void Awake ()
     {
-        //gameManager = FindObjectOfType<GameManager> ();
+        gameManager = FindObjectOfType<GameManager> ();
         xPos = transform.position.x;
     }
 
-    // Criar a condição do sprite renderer
+    void Start ()
+    {
+        if (gameManager.isFemale == true)
+        {
+            GetComponent<Image> ().sprite = girl;
+        } 
+        else if (gameManager.isFemale == false)
+        {
+            GetComponent<Image> ().sprite = boy;
+        }
+    }
 
     void Update ()
     {
