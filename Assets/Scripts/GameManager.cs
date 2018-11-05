@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public Animator chooseChar;
     public bool isFemale;
+    public int volumeA, volumeB;
 
     void Awake ()
     {
@@ -45,6 +46,11 @@ public class GameManager : MonoBehaviour {
         {
             LoadNextScene ();
         }
+
+        if (Input.GetKeyDown (KeyCode.Escape))
+        {
+            Application.Quit ();
+        }
     }
 
     public void LoadNextScene ()
@@ -57,8 +63,5 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene (0);
     }
 
-    public void ExitGame ()
-    {
-        Application.Quit ();
-    }
+ 
 }

@@ -57,13 +57,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsToSpawn:
+  - {fileID: 11400000, guid: d14a7fe11be21b949aac823a57c7770e, type: 2}
+  - {fileID: 11400000, guid: 7a5a3210bd5ea8b42ba19a1ed493d074, type: 2}
+  - {fileID: 11400000, guid: aa8974f35bad0d949bf380cef0d59ce3, type: 2}
   - {fileID: 11400000, guid: f5d6916162ffbe6419a8ca7632853e33, type: 2}
-  - {fileID: 11400000, guid: 887c466b02404404f97d8ce83e228d08, type: 2}
   - {fileID: 11400000, guid: a09f819b20e1c524eb9652264e13ba6b, type: 2}
-  - {fileID: 11400000, guid: b7db373d13e4b5942959b8f41cec362e, type: 2}
-  - {fileID: 11400000, guid: 6c99a7da96b479b409934e8a2da1e714, type: 2}
-  - {fileID: 11400000, guid: f542eff1407845c49a4b7426ff73152e, type: 2}
-  - {fileID: 11400000, guid: 903f8ee97ba24c84db5775fce56fcfb2, type: 2}
+  - {fileID: 11400000, guid: 887c466b02404404f97d8ce83e228d08, type: 2}
+  - {fileID: 11400000, guid: bbf87cb378bb0394c8d600aebe2409b1, type: 2}
+  - {fileID: 11400000, guid: 0b80b6cbd24aa024e99da3e4016c35e1, type: 2}
+  - {fileID: 11400000, guid: d44be132bd2d1d04e83903b807610976, type: 2}
+  - {fileID: 11400000, guid: 041e7d366c559244f858d4d5b6c2a68a, type: 2}
+  - {fileID: 11400000, guid: d58f4378538bf764b9ca454aabda1574, type: 2}
+  - {fileID: 11400000, guid: 64433e7a02f19024796fc6b9a9c70d8e, type: 2}
+  - {fileID: 11400000, guid: c800262de68c54e43ba030f2e37dec6c, type: 2}
+  - {fileID: 11400000, guid: eafb2839f78955248b8395f217a023d5, type: 2}
+  - {fileID: 11400000, guid: 2f49f2a641e68c94b8407e21856e62a9, type: 2}
+  - {fileID: 11400000, guid: 7dc616990ff2bce4cbf2227c0de2c304, type: 2}
+  - {fileID: 11400000, guid: 6fb4c6fdd2232634b9686753f284f08a, type: 2}
   - {fileID: 11400000, guid: 68f269866b48df04a9ec270832bb8b88, type: 2}
   item: {fileID: 0}
   gotItA: 0

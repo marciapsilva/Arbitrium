@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public int gotItA, gotItB;
     public _BarManager barManager;
     public Sprite boy, girl;
+    public RectTransform myOwnRect;
 
     void Awake ()
     {
@@ -31,33 +32,50 @@ public class Player : MonoBehaviour
 
     void Update ()
     {
+
         if (Input.GetKey (KeyCode.RightArrow))
         {
-            xPos += speed * Time.deltaTime;
-            //myAnimator.SetBool ("IsWalking", true);
-            transform.position = new Vector3 (xPos, transform.position.y, transform.position.z);
-            if (transform.localScale.x <= 0)
+            if (myOwnRect.anchoredPosition.x <= 37)
             {
-                transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-            }
-            else
-            {
-                return;
-            }
+                xPos += speed * Time.deltaTime;
+
+                //myAnimator.SetBool ("IsWalking", true);
+
+                transform.position = new Vector3 (xPos, transform.position.y, transform.position.z);
+
+                if (transform.localScale.x <= 0)
+                {
+                    transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                }
+                else
+                {
+                    return;
+                }
+            }     
         }
         else if (Input.GetKey (KeyCode.LeftArrow))
         {
-            xPos -= speed * Time.deltaTime;
-            //myAnimator.SetBool ("IsWalking", true);
-            transform.position = new Vector3 (xPos, transform.position.y, transform.position.z);
-            if (transform.localScale.x >= 0)
+            if (myOwnRect.anchoredPosition.x >= -35)
             {
-                transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                xPos -= speed * Time.deltaTime;
+
+                //myAnimator.SetBool ("IsWalking", true);
+
+                transform.position = new Vector3 (xPos, transform.position.y, transform.position.z);
+
+                Debug.Log ("transform: " + transform.position.x);
+                Debug.Log ("xPos: " + xPos);
+
+                if (transform.localScale.x >= 0)
+                {
+                    transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                }
+                else
+                {
+                    return;
+                }
             }
-            else
-            {
-                return;
-            }
+            
         }
         else
         {
@@ -68,8 +86,8 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D col)
     {
-        gotItA = col.GetComponent<Collectable> ().lostItA;
-        gotItB = col.GetComponent<Collectable> ().lostItB;
+        gotItA = col.GetComponent<Collectable> ().gotItA;
+        gotItB = col.GetComponent<Collectable> ().gotItB;
 
         barManager.updateBar (0, 0, gotItA, gotItB);
 

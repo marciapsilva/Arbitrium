@@ -22,9 +22,6 @@ public class Collector : MonoBehaviour
 
         barManager.updateBar (lostItA, lostItB, 0, 0);
 
-        AudioSource audio = GetComponent<AudioSource> ();
-        audio.Play ();
-
         Destroy (col.gameObject);
     }
 }

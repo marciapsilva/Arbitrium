@@ -1,44 +1,84 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class _BarManager : MonoBehaviour
 {
-    public GameObject Bar_A, Bar_B;
+    //public static _BarManager instance = null;
+    public RectTransform Bar_A, Bar_B;
     public int volumeA, volumeB;
-    public bool isA;
 
-    void Update ()
+    void Awake ()
     {
 
     }
 
+    void Start ()
+    {
+        if (SceneManager.GetActiveScene ().buildIndex == 1)
+        {
+            volumeA = 5;
+            volumeB = 5;
+        }
+        else if (SceneManager.GetActiveScene ().buildIndex == 2)
+        {
+            volumeA = GameManager.instance.volumeA;
+            volumeB = GameManager.instance.volumeB;
+            updateBarImage ();
+        }
+    }
+
+    void Update ()
+    {
+        if (Input.GetKeyDown (KeyCode.Return))
+        {
+            SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+        }
+    }
+
     public void updateBar (int lostA, int lostB, int gotA, int gotB)
     {
-        int tempA = volumeA;
-        int tempB = volumeB;
-
         volumeA += lostA;
         volumeA += gotA;
+        volumeA = (int)Mathf.Clamp (volumeA, 1f, 11f);
 
         volumeB += lostB;
         volumeB += gotB;
+        volumeB = (int)Mathf.Clamp (volumeB, 1f, 11f);
 
-        if (volumeA > tempA) // barra encheu
+        GameManager.instance.volumeA = volumeA;
+        GameManager.instance.volumeB = volumeB;
+
+        updateBarImage ();
+        ConditionToTint ();
+    }
+
+    public void updateBarImage ()
+    {
+        Bar_A.anchoredPosition = new Vector2 (Bar_A.anchoredPosition.x, volumeA * 5f);
+        Bar_B.anchoredPosition = new Vector2 (Bar_B.anchoredPosition.x, volumeB * 5f);
+    }
+
+    public void ConditionToTint ()
+    {
+        if (volumeA > 6 || volumeA < 5)
         {
-            Bar_A.transform.position = new Vector3 (Bar_A.transform.position.x, Bar_A.transform.position.y - 10f, Bar_A.transform.position.z);
+            Bar_A.GetComponent<Image> ().color = Color.red;
         }
-        else if (volumeA < tempA)
+        else
         {
-            Bar_A.transform.position = new Vector3 (Bar_A.transform.position.x, Bar_A.transform.position.y + 10f, Bar_A.transform.position.z);
+            Bar_A.GetComponent<Image> ().color = Color.white;
         }
-        else if (volumeB > tempB)
+
+        if (volumeB > 6 || volumeB < 5)
         {
-            Bar_B.transform.position = new Vector3 (Bar_B.transform.position.x, Bar_B.transform.position.y - 10f, Bar_B.transform.position.z);
+            Bar_B.GetComponent<Image> ().color = Color.red;
         }
-        else if (volumeB < tempB)
+        else
         {
-            Bar_B.transform.position = new Vector3 (Bar_B.transform.position.x, Bar_B.transform.position.y + 10f, Bar_B.transform.position.z);
+            Bar_B.GetComponent<Image> ().color = Color.white;
         }
     }
 }

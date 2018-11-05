@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7cb73c881b88ff4abb096aa71246df3, type: 3}
   m_Name: Tv
   m_EditorClassIdentifier: 
-  gotItA: 0
+  gotItA: 1
   gotItB: 0
-  lostItA: 0
+  lostItA: -1
   lostItB: 0
   itemImage: {fileID: 21300000, guid: 25832ed6fd8c1fc4c9a64f9d85d0b4a2, type: 3}

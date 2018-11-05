@@ -7,8 +7,8 @@ public class Spawner : MonoBehaviour
 {
     public GameObject collectable;
 
-    public bool timeHasEnded = false; // TODO: Get countdown working
-    public float waitBetweenSpawns;
+    public bool timeHasEnded = false; // TODO: Achar referência de que a barra de tempo acabou
+    public float waitBetweenSpawns, spawnRate;
 
     void Awake ()
     {
@@ -35,11 +35,11 @@ public class Spawner : MonoBehaviour
                 if (i >= 30) // Countdown?
                 {
                     SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
-                    yield return new WaitForSecondsRealtime (2);
+                    yield return new WaitForSecondsRealtime (spawnRate);
                 }
 
                 SpawnItems ();
-                yield return new WaitForSecondsRealtime (2);
+                yield return new WaitForSecondsRealtime (spawnRate);
             }
         }
     }

@@ -305,8 +305,10 @@
   <ItemGroup>
     <Compile Include="Assets\_BarManager.cs" />
     <Compile Include="Assets\BackgroundMusic.cs" />
+    <Compile Include="Assets\CharSelect.cs" />
     <Compile Include="Assets\Credits.cs" />
     <Compile Include="Assets\Debugger.cs" />
+    <Compile Include="Assets\EndManager.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
     <Compile Include="Assets\Scripts\Collector.cs" />

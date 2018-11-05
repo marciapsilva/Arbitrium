@@ -366,7 +366,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Belit \n\nDani\n\nKika Ernane\n\nMarcia Silva\n\nMayara Fortin\n"
+  m_Text: "Belit \n\nDani Kiedis\n\nKika Ernane\n\nMarcia Silva\n\nMayara Fortin\n"
 --- !u!222 &407488829
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -492,7 +492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64.2, y: 53.8}
+  m_AnchoredPosition: {x: 75.9, y: 65.5}
   m_SizeDelta: {x: 76.97, y: 46.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1333275580
@@ -516,7 +516,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ee3c73801201260438808df5d7b86686, type: 3}
-    m_FontSize: 18
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
