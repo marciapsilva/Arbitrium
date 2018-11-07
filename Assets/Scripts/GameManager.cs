@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
@@ -8,7 +6,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public Animator chooseChar;
     public bool isFemale;
-    public int volumeA, volumeB;
+    public float weightBarValue;
 
     void Awake ()
     {
@@ -26,31 +24,42 @@ public class GameManager : MonoBehaviour {
 
     void Start ()
     {
-        chooseChar.SetBool ("rightPress", false);
+        chooseChar.SetBool ("isFemale", true);
         isFemale = true;
     } 
 
     void Update ()
     {
-        if (Input.GetKeyDown (KeyCode.RightArrow))
-        {
-            chooseChar.SetBool ("rightPress", true);
-            isFemale = false;
-        }
-        else if (Input.GetKeyDown (KeyCode.LeftArrow))
-        {
-            chooseChar.SetBool ("rightPress", false);
-            isFemale = true;
-        }
-        else if (Input.GetKeyDown (KeyCode.Return))
-        {
-            LoadNextScene ();
-        }
-
         if (Input.GetKeyDown (KeyCode.Escape))
         {
             Application.Quit ();
         }
+        else if (Input.GetKeyDown (KeyCode.RightArrow))
+        {
+            SelectBoy ();
+        }
+        else if (Input.GetKeyDown (KeyCode.LeftArrow))
+        {
+            SelectGirl ();
+        }
+
+    }
+
+    public void SelectBoy ()
+    {
+        chooseChar.SetBool ("isFemale", false);
+        isFemale = false;
+    }
+
+    public void SelectGirl ()
+    {
+        chooseChar.SetBool ("isFemale", true);
+        isFemale = true;
+    }
+
+    public void PlayGame ()
+    {
+        SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
     }
 
     public void LoadNextScene ()
@@ -62,6 +71,4 @@ public class GameManager : MonoBehaviour {
     {
         SceneManager.LoadScene (0);
     }
-
- 
 }

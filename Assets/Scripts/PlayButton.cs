@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class PlayButton : MonoBehaviour
 {
@@ -9,9 +6,7 @@ public class PlayButton : MonoBehaviour
 
     public void PlayGame ()
     {
-        gameManager.isFemale = true; // passar a condição pro Game Manager
+        gameManager.isFemale = true; 
         gameManager.LoadNextScene ();
-
-        // TODO: create condition for active sprite male of female (know which was clicked)
     }
 }

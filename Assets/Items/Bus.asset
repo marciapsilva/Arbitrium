@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Bus
   m_EditorClassIdentifier: 
   gotItA: 0
-  gotItB: 1
+  gotItB: 0.05
   lostItA: 0
-  lostItB: -1
+  lostItB: -0.05
   itemImage: {fileID: 21300000, guid: 1c8ed69a130609a46a51445f4472826f, type: 3}

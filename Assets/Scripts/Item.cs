@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 [CreateAssetMenu (fileName = "New Collectable", menuName = "Item")]
 public class Item : ScriptableObject
 {
-    public int gotItA, gotItB;
-    public int lostItA, lostItB;
+    public float gotItA, gotItB;
+    public float lostItA, lostItB;
     public Sprite itemImage; 
 }

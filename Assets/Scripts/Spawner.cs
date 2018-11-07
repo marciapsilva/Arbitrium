@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,7 +6,7 @@ public class Spawner : MonoBehaviour
 {
     public GameObject collectable;
 
-    public bool timeHasEnded = false; // TODO: Achar referência de que a barra de tempo acabou
+    //public bool timeHasEnded = false; // TODO: Achar referência de que a barra de tempo acabou
     public float waitBetweenSpawns, spawnRate;
 
     void Awake ()
@@ -28,7 +27,7 @@ public class Spawner : MonoBehaviour
     IEnumerator Spawn ()
     {
         yield return new WaitForSeconds (waitBetweenSpawns);
-        while (timeHasEnded == false)
+        //while (timeHasEnded == false)
         {
             for (int i = 0; i < 30; i++) // TODO: Revisar esse número
             {

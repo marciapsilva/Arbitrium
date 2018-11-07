@@ -303,24 +303,24 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_BarManager.cs" />
-    <Compile Include="Assets\BackgroundMusic.cs" />
-    <Compile Include="Assets\CharSelect.cs" />
-    <Compile Include="Assets\Credits.cs" />
-    <Compile Include="Assets\Debugger.cs" />
-    <Compile Include="Assets\EndManager.cs" />
-    <Compile Include="Assets\Player.cs" />
+    <Compile Include="Assets\Scripts\_BarManager.cs" />
+    <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
+    <Compile Include="Assets\Scripts\CharSelect.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
     <Compile Include="Assets\Scripts\Collector.cs" />
+    <Compile Include="Assets\Scripts\Credits.cs" />
+    <Compile Include="Assets\Scripts\EndManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\PlayButton.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
-    <Compile Include="Assets\TimeBar.cs" />
-    <Compile Include="Assets\WGJ.cs" />
+    <Compile Include="Assets\Scripts\TimeBar.cs" />
+    <Compile Include="Assets\Scripts\WGJ.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cameras\leftShader.shader" />
+    <None Include="Assets\FreePixelEffect\Additive.shader" />
     <None Include="C:\ProgramData\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.2\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="C:\ProgramData\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.2\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="C:\ProgramData\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.2\Editor\Resources\Templates\Alert.uxml" />

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7cb73c881b88ff4abb096aa71246df3, type: 3}
   m_Name: Carro
   m_EditorClassIdentifier: 
-  gotItA: 1
+  gotItA: 0.05
   gotItB: 0
   lostItA: -1
   lostItB: 0

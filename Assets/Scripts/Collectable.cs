@@ -1,16 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Collectable : MonoBehaviour
 {
     public List<Item> itemsToSpawn;
-
     public Item item;
-
-    public int gotItA, gotItB, lostItA, lostItB;
     public Image itemImage;
+
+    public float gotItA, gotItB, lostItA, lostItB;
     public float currentPositionY, speed;
 
     void Start ()
@@ -36,5 +34,4 @@ public class Collectable : MonoBehaviour
         itemImage.sprite = item.itemImage; 
         itemImage = GetComponent<Image> ();
     }
-
 }

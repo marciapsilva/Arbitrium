@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Collector : MonoBehaviour
 {
@@ -8,11 +6,11 @@ public class Collector : MonoBehaviour
     
     public _BarManager barManager;
 
-    public int lostItA, lostItB;
+    public float lostItA, lostItB;
 
     void Update ()
     {
-        //lostIt = 
+
     }
 
     void OnTriggerEnter2D (Collider2D col)
