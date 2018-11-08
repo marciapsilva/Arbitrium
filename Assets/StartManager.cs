@@ -10,7 +10,7 @@ public class StartManager : MonoBehaviour
 
     public void SelectBoy ()
     {
-        GameManager.instance.SelectBoy ();
+        GameManager.instance.SelectBoy ();   
     }
 
     public void StartGame()

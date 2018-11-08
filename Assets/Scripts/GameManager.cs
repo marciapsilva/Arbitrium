@@ -43,25 +43,22 @@ public class GameManager : MonoBehaviour
         {
             SelectGirl ();
         }
-
-        if (SceneManager.GetActiveScene ().buildIndex == 0)
-        {
-            chooseChar.SetBool ("isFemale", true);
-            isFemale = true;
-            weightBarValue = 0f;
-        }
     }
 
     public void SelectBoy ()
     {
+        Debug.Log ("boy - foi lido");
         chooseChar.SetBool ("isFemale", false);
         isFemale = false;
+        Debug.Log ("boy - foi setado");
     }
 
     public void SelectGirl ()
     {
+        Debug.Log ("girl - foi lido");
         chooseChar.SetBool ("isFemale", true);
         isFemale = true;
+        Debug.Log ("gir - foi setado");
     }
 
     public void PlayGame ()
