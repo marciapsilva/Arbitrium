@@ -29,9 +29,9 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds (waitBetweenSpawns);
         //while (timeHasEnded == false)
         {
-            for (int i = 0; i < 30; i++) // TODO: Revisar esse número
+            for (int i = 0; i < 44; i++) // TODO: Revisar esse número
             {
-                if (i >= 30) // Countdown?
+                if (i >= 44) // Countdown?
                 {
                     SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
                     yield return new WaitForSecondsRealtime (spawnRate);

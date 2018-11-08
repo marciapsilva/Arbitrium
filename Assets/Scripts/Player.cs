@@ -9,11 +9,16 @@ public class Player : MonoBehaviour
     public _BarManager barManager;
     public Sprite boy, girl;
     public RectTransform myOwnRect;
+    public bool isMovingLeft, isMovingRight, isNotMoving;
 
     void Awake ()
     {
         gameManager = FindObjectOfType<GameManager> ();
         xPos = transform.position.x;
+
+        isMovingLeft = false;
+        isMovingRight = false;
+        isNotMoving = true;
     }
 
     void Start ()
@@ -30,56 +35,27 @@ public class Player : MonoBehaviour
 
     void Update ()
     {
-
-        /*if (Input.GetKey (KeyCode.RightArrow))
-        {
-            if (myOwnRect.anchoredPosition.x <= 37)
-            {
-                xPos += speed * Time.deltaTime;
-
-                //myAnimator.SetBool ("IsWalking", true);
-
-                transform.position = new Vector3 (xPos, transform.position.y, transform.position.z);
-
-                if (transform.localScale.x <= 0)
-                {
-                    transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-                }
-                else
-                {
-                    return;
-                }
-            }     
-        }
-        else if (Input.GetKey (KeyCode.LeftArrow))
+        if (isMovingLeft)
         {
             if (myOwnRect.anchoredPosition.x >= -35)
             {
                 xPos -= speed * Time.deltaTime;
-
-                //myAnimator.SetBool ("IsWalking", true);
-
                 transform.position = new Vector3 (xPos, transform.position.y, transform.position.z);
-
-                Debug.Log ("transform: " + transform.position.x);
-                Debug.Log ("xPos: " + xPos);
-
-                if (transform.localScale.x >= 0)
-                {
-                    transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-                }
-                else
-                {
-                    return;
-                }
             }
-            
+        }
+
+        else if (isMovingRight)
+        {
+            if (myOwnRect.anchoredPosition.x <= 37)
+            {
+                xPos += speed * Time.deltaTime;
+                transform.position = new Vector3 (xPos, transform.position.y, transform.position.z);
+            }
         }
         else
         {
-            //myAnimator.SetBool ("IsWalking", false);
-            return;
-        }*/
+            transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
+        }
     }
 
     void OnTriggerEnter2D (Collider2D col)
@@ -93,58 +69,5 @@ public class Player : MonoBehaviour
         audio.Play ();
 
         Destroy (col.gameObject);
-    }
-
-    public void MovePlayer (bool isLeft)
-    {
-        if (isLeft == false)
-        {
-            if (myOwnRect.anchoredPosition.x <= 37)
-            {
-                xPos += speed * Time.deltaTime;
-
-                //myAnimator.SetBool ("IsWalking", true);
-
-                transform.position = new Vector3 (xPos, transform.position.y, transform.position.z);
-
-                if (transform.localScale.x <= 0)
-                {
-                    transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-                }
-                else
-                {
-                    return;
-                }
-            }
-        }
-        else if (isLeft == true)
-        {
-            if (myOwnRect.anchoredPosition.x >= -35)
-            {
-                xPos -= speed * Time.deltaTime;
-
-                //myAnimator.SetBool ("IsWalking", true);
-
-                transform.position = new Vector3 (xPos, transform.position.y, transform.position.z);
-
-                Debug.Log ("transform: " + transform.position.x);
-                Debug.Log ("xPos: " + xPos);
-
-                if (transform.localScale.x >= 0)
-                {
-                    transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-                }
-                else
-                {
-                    return;
-                }
-            }
-
-        }
-        else
-        {
-            //myAnimator.SetBool ("IsWalking", false);
-            return;
-        }
     }
 }

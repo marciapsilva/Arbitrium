@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7cb73c881b88ff4abb096aa71246df3, type: 3}
-  m_Name: Gota
+  m_Name: gota
   m_EditorClassIdentifier: 
   gotItA: 0
-  gotItB: 1
+  gotItB: 0.05
   lostItA: 0
-  lostItB: -1
-  itemImage: {fileID: 21300000, guid: 127a9900c35c4d04cb87b40758301c2d, type: 3}
+  lostItB: 0.05
+  itemImage: {fileID: 21300000, guid: 952bf0d99e316e14a9b22e12582ec330, type: 3}

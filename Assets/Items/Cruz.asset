@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7cb73c881b88ff4abb096aa71246df3, type: 3}
-  m_Name: Cruz
+  m_Name: cruz
   m_EditorClassIdentifier: 
-  gotItA: 1
-  gotItB: 0
-  lostItA: -1
-  lostItB: 0
+  gotItA: 0
+  gotItB: 0.05
+  lostItA: 0
+  lostItB: -0.05
   itemImage: {fileID: 21300000, guid: 5099669ab010be24682f0ebd0d016229, type: 3}

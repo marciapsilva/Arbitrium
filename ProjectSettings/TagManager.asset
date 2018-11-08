@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: WeightBarBackground
+    uniqueID: 2670476261
+    locked: 0
+  - name: WeightBarSafeZone
+    uniqueID: 1818394165
+    locked: 0
+  - name: WeightBarHandle
+    uniqueID: 2277284299
+    locked: 0

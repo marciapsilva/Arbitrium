@@ -305,6 +305,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\_BarManager.cs" />
     <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
+    <Compile Include="Assets\Scripts\Btn_Left.cs" />
+    <Compile Include="Assets\Scripts\Btn_Right.cs" />
     <Compile Include="Assets\Scripts\CharSelect.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
     <Compile Include="Assets\Scripts\Collector.cs" />
@@ -320,7 +322,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cameras\leftShader.shader" />
-    <None Include="Assets\FreePixelEffect\Additive.shader" />
     <None Include="C:\ProgramData\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.2\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="C:\ProgramData\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.2\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="C:\ProgramData\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.2\Editor\Resources\Templates\Alert.uxml" />
