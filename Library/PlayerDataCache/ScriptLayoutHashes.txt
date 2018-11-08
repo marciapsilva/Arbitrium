@@ -19,6 +19,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 e43db8177e7473557894e225b4e19519 Assembly-CSharp.dll:._BarManager
+12b95c8f2b54918ab14825a44eeb4bd5 Assembly-CSharp.dll:.Btn_Right
 38660e665cf0054d709a322e8efe4d09 Assembly-CSharp.dll:.TimeBar
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -142,6 +143,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 06a509ff5376d3049158faebb61d2013 Assembly-CSharp.dll:.Collectable
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Btn_Girl
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
@@ -164,4 +166,4 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 ce1f6103dc872fe8172049afedb76a2c Assembly-CSharp.dll:.Collector
 d27699dfc30c2a21439bbef1ad43c8ea Assembly-CSharp.dll:.PlayButton
 12b95c8f2b54918ab14825a44eeb4bd5 Assembly-CSharp.dll:.Btn_Left
-12b95c8f2b54918ab14825a44eeb4bd5 Assembly-CSharp.dll:.Btn_Right
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.StartManager

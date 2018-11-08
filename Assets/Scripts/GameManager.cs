@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
     public static GameManager instance = null;
     public Animator chooseChar;
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour {
         }
         else if (instance != this)
         {
-            Destroy (gameObject);
+            Destroy (gameObject);        
         }
 
         DontDestroyOnLoad (gameObject);
@@ -43,6 +44,12 @@ public class GameManager : MonoBehaviour {
             SelectGirl ();
         }
 
+        if (SceneManager.GetActiveScene ().buildIndex == 0)
+        {
+            chooseChar.SetBool ("isFemale", true);
+            isFemale = true;
+            weightBarValue = 0f;
+        }
     }
 
     public void SelectBoy ()

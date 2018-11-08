@@ -261,11 +261,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1773467642}
+  - {fileID: 1441432166}
   - {fileID: 503108609}
   - {fileID: 833824655}
   - {fileID: 1719703304}
   - {fileID: 725075290}
-  - {fileID: 1441432166}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -274,6 +274,46 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &328901231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 328901233}
+  - component: {fileID: 328901232}
+  m_Layer: 0
+  m_Name: StartManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &328901232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 328901231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59b98e4dab6dc1b44adb2045d3ad0ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &328901233
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 328901231}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &393880262
 Prefab:
   m_ObjectHideFlags: 0
@@ -371,6 +411,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1565244880653334, guid: 0a031bbd6594a4b4cb4499de98ab9b48, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a031bbd6594a4b4cb4499de98ab9b48, type: 2}
   m_IsPrefabParent: 0
@@ -419,7 +463,7 @@ Prefab:
     - target: {fileID: 224003521634660198, guid: d8efb359502bb6a479a3935765bb6b93,
         type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224003521634660198, guid: d8efb359502bb6a479a3935765bb6b93,
         type: 2}
@@ -471,6 +515,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1419043195999708, guid: d8efb359502bb6a479a3935765bb6b93, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8efb359502bb6a479a3935765bb6b93, type: 2}
   m_IsPrefabParent: 0
@@ -502,7 +550,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 242764157}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -571,7 +619,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 242764157}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -618,8 +666,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1725113412}
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 328901232}
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -692,7 +740,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 242764157}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -927,7 +975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1222968691
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1018,7 +1066,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1725113412}
+      - m_Target: {fileID: 328901232}
         m_MethodName: SelectBoy
         m_Mode: 1
         m_Arguments:
@@ -1069,7 +1117,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23, y: 0}
+  m_AnchoredPosition: {x: -0.3, y: 0}
   m_SizeDelta: {x: 42, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1617798826
@@ -1144,7 +1192,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1725113412}
+      - m_Target: {fileID: 328901232}
         m_MethodName: SelectGirl
         m_Mode: 1
         m_Arguments:
@@ -1188,7 +1236,7 @@ RectTransform:
   - {fileID: 1617798825}
   - {fileID: 1222968691}
   m_Father: {fileID: 242764157}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1230,12 +1278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ae9f570314f3641ba211fe44263b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1725113412 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114176506331670256, guid: c94dd884cdf9c964eb00498969516675,
-    type: 2}
-  m_PrefabInternal: {fileID: 2092590369}
-  m_Script: {fileID: 11500000, guid: 46555d4473522fc43974ff7477c649f9, type: 3}
 --- !u!224 &1773467642 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224471331485297682, guid: 0a031bbd6594a4b4cb4499de98ab9b48,
@@ -1279,11 +1321,6 @@ Prefab:
     - target: {fileID: 4907879978455378, guid: c94dd884cdf9c964eb00498969516675, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114176506331670256, guid: c94dd884cdf9c964eb00498969516675,
-        type: 2}
-      propertyPath: chooseChar
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c94dd884cdf9c964eb00498969516675, type: 2}

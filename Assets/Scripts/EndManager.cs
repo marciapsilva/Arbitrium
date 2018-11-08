@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndManager : MonoBehaviour
 {
     public GameObject endA, endB, balancedEnd;
     private float finalScore;
+
 
     void Start ()
     {
@@ -22,4 +24,9 @@ public class EndManager : MonoBehaviour
             balancedEnd.SetActive (true);
         }
     }
+
+    public void BackToMainMenu ()
+    {
+        GameManager.instance.LoadMenuScene ();
+    } 
 }

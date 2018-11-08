@@ -303,6 +303,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Btn_Girl.cs" />
     <Compile Include="Assets\Scripts\_BarManager.cs" />
     <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
     <Compile Include="Assets\Scripts\Btn_Left.cs" />
@@ -319,6 +320,7 @@
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\TimeBar.cs" />
     <Compile Include="Assets\Scripts\WGJ.cs" />
+    <Compile Include="Assets\StartManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cameras\leftShader.shader" />
