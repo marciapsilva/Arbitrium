@@ -35,7 +35,22 @@ public class Player : MonoBehaviour
 
     void Update ()
     {
-        if (isMovingLeft)
+        if ((myOwnRect.anchoredPosition.x >= 37) && (Input.GetAxis ("Horizontal") >= 0))
+        {
+            return;
+        }
+        else if ((myOwnRect.anchoredPosition.x <= -35) && (Input.GetAxis ("Horizontal") <= 0))
+        {
+            return;
+        }
+        else
+        {
+            float movement = Input.GetAxis ("Horizontal") * speed;
+            movement *= Time.deltaTime;
+            transform.Translate (movement, 0, 0);
+        }
+
+        /*if (isMovingLeft)
         {
             if (myOwnRect.anchoredPosition.x >= -35)
             {
@@ -55,7 +70,7 @@ public class Player : MonoBehaviour
         else
         {
             transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
-        }
+        }*/
     }
 
     void OnTriggerEnter2D (Collider2D col)

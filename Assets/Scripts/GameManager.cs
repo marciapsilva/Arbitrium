@@ -35,13 +35,17 @@ public class GameManager : MonoBehaviour
         {
             Application.Quit ();
         }
-        else if (Input.GetKeyDown (KeyCode.RightArrow))
+        else if ((Input.GetKeyDown (KeyCode.RightArrow)) && (SceneManager.GetActiveScene ().buildIndex == 0))
         {
             SelectBoy ();
         }
-        else if (Input.GetKeyDown (KeyCode.LeftArrow))
+        else if ((Input.GetKeyDown (KeyCode.LeftArrow)) && (SceneManager.GetActiveScene ().buildIndex == 0))
         {
             SelectGirl ();
+        }
+        else if ((Input.GetKeyDown (KeyCode.Space)) && (SceneManager.GetActiveScene ().buildIndex == 0))
+        {
+            PlayGame ();
         }
     }
 

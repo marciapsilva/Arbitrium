@@ -44,7 +44,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 43
+  m_Radius: 12
 --- !u!114 &114077033274789008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,13 +71,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 68f269866b48df04a9ec270832bb8b88, type: 2}
   - {fileID: 11400000, guid: e45c4ac7919cb7045a9a5598486dd7e8, type: 2}
   - {fileID: 11400000, guid: 78c9d73c11efaa548be1613b38e28381, type: 2}
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 041e7d366c559244f858d4d5b6c2a68a, type: 2}
   itemImage: {fileID: 114356790412508618}
-  gotItA: 0
+  gotItA: 0.05
   gotItB: 0
-  lostItA: 0
+  lostItA: -0.05
   lostItB: 0
-  currentPositionY: 0
+  currentPositionY: -146.79065
   speed: 50
 --- !u!114 &114356790412508618
 MonoBehaviour:
@@ -98,7 +98,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a8b8ed87a638e8548abc993c13723fbc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

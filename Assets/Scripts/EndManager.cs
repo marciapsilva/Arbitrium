@@ -25,6 +25,14 @@ public class EndManager : MonoBehaviour
         }
     }
 
+    void Update ()
+    {
+        if (Input.GetKey (KeyCode.Space))
+        {
+            BackToMainMenu ();
+        }
+    }
+
     public void BackToMainMenu ()
     {
         GameManager.instance.LoadMenuScene ();
