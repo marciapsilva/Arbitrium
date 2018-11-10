@@ -304,6 +304,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Btn_Girl.cs" />
+    <Compile Include="Assets\Btn_Play.cs" />
     <Compile Include="Assets\Scripts\_BarManager.cs" />
     <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
     <Compile Include="Assets\Scripts\Btn_Left.cs" />

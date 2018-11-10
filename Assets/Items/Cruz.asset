@@ -14,5 +14,5 @@ MonoBehaviour:
   gotItA: 0
   gotItB: 0.05
   lostItA: 0
-  lostItB: -0.05
+  lostItB: 0.05
   itemImage: {fileID: 21300000, guid: 5099669ab010be24682f0ebd0d016229, type: 3}

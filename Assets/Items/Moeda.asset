@@ -13,6 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gotItA: 0.05
   gotItB: 0
-  lostItA: -0.05
+  lostItA: 0.05
   lostItB: 0
   itemImage: {fileID: 21300000, guid: a68cb3217ff60e44f8bde3001ae24ca2, type: 3}

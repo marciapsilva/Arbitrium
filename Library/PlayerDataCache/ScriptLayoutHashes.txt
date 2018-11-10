@@ -167,3 +167,4 @@ ce1f6103dc872fe8172049afedb76a2c Assembly-CSharp.dll:.Collector
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.StartManager
 d27699dfc30c2a21439bbef1ad43c8ea Assembly-CSharp.dll:.PlayButton
 12b95c8f2b54918ab14825a44eeb4bd5 Assembly-CSharp.dll:.Btn_Left
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Btn_Play
