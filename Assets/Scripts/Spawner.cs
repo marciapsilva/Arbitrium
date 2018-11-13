@@ -45,7 +45,7 @@ public class Spawner : MonoBehaviour
 
     public void SpawnItems ()
     {
-        Vector3 spawnRandomPos = new Vector3 (Random.Range (80, 140), transform.position.y, transform.position.z);
+        Vector3 spawnRandomPos = new Vector3 (Random.Range (-101, -88), transform.position.y, transform.position.z);
         GameObject itemSpawned = Instantiate (collectable, spawnRandomPos, Quaternion.identity, this.transform);
         Debug.Log ("This has been instantiated" + itemSpawned);
     }

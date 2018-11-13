@@ -71,14 +71,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 68f269866b48df04a9ec270832bb8b88, type: 2}
   - {fileID: 11400000, guid: e45c4ac7919cb7045a9a5598486dd7e8, type: 2}
   - {fileID: 11400000, guid: 78c9d73c11efaa548be1613b38e28381, type: 2}
-  item: {fileID: 11400000, guid: 041e7d366c559244f858d4d5b6c2a68a, type: 2}
+  item: {fileID: 0}
   itemImage: {fileID: 114356790412508618}
-  gotItA: 0.05
+  gotItA: 0
   gotItB: 0
-  lostItA: -0.05
+  lostItA: 0
   lostItB: 0
   currentPositionY: -146.79065
-  speed: 50
+  speed: 15
 --- !u!114 &114356790412508618
 MonoBehaviour:
   m_ObjectHideFlags: 1
